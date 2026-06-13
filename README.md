@@ -1,6 +1,6 @@
 ## 📁 Структура проекта
 
-DIT_tasks/
+'''DIT_tasks/
 ├── block_one/
 │   ├── data/
 │   │   └── mosmusic_final_collabs_multiple_albums.db
@@ -16,5 +16,5 @@ DIT_tasks/
     ├── data/
     │   └── newborns_stats.csv
     ├── task_1_prediction.ipynb
-    └── README.md
+    └── README.md'''
 README.md
