@@ -39,7 +39,10 @@
 
 ## 🚀 Использование
 
-1. Установите SQLite или другой совместимый СУБД
-2. Создайте базу данных:
-```bash
-sqlite3 music_database.db < database/schema.sql
+1. Откройте DBeaver
+2. Создайте новое подключение к SQLite:
+   - Нажмите **"Новое соединение"** (иконка розетки)
+   - Выберите **SQLite**
+   - Укажите путь к файлу `dataset/mosmusic_final_collabs_multiple_albums`
+3. Откройте любой файл из папки `queries/` через **File → Open File**
+4. Нажмите **Ctrl + Enter** для выполнения запроса
