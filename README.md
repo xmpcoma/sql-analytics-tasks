@@ -16,6 +16,6 @@
     ├── data/
     │   └── newborns_stats.csv
     ├── task_1_prediction.ipynb
-    └── README.md'''
+    └── README.md
 README.md
 ```
