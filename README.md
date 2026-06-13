@@ -1,6 +1,6 @@
 ## 📁 Структура проекта
-
-```DIT_tasks/
+```
+DIT_tasks/
 ├── block_one/
 │   ├── data/
 │   │   └── mosmusic_final_collabs_multiple_albums.db
