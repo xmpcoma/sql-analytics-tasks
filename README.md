@@ -1,48 +1,20 @@
-# SQL Analytics Tasks
+## 📁 Структура проекта
 
-Решение задач по анализу музыкальных данных с использованием SQL.
-
-## 📋 Описание
-
-Проект содержит SQL-запросы для анализа базы данных музыкального сервиса:
-- Анализ популярности альбомов и жанров
-- Динамика прослушиваний
-- Топ-исполнители
-
-## 🗄️ Структура БД
-
-### Таблицы:
-- **artists** - исполнители (artist_id, name, country)
-- **albums** - альбомы (album_id, title, artist_id, release_year)
-- **songs** - песни (song_id, title, album_id, release_year)
-- **song_artists** - связь песен и исполнителей (song_id, artist_id)
-- **genres** - жанры (genre_id, name)
-- **song_genres** - связь песен и жанров (song_id, genre_id)
-- **listening_logs** - логи прослушиваний (user_id, song_id, listen_time, device, region)
-
-## 📊 Задачи
-
-### Task 1: Самый прослушиваемый Rock-альбом
-Найти альбом с наибольшим количеством прослушиваний песен в жанре Rock.
-
-### Task 2: Топ-20% по хитам
-Определить исполнителя с наибольшим количеством песен в топ-20% по прослушиваниям.
-
-### Task 3: Альбом с коллаборациями
-Найти альбом с наибольшим количеством песен с несколькими артистами.
-
-### Task 4: Динамика прослушиваний
-Составить таблицу с суммарным количеством прослушиваний по месяцам.
-
-### Task 5: Популярность жанров по регионам
-Создать сводную таблицу прослушиваний по жанрам и регионам.
-
-## 🚀 Использование
-
-1. Откройте DBeaver
-2. Создайте новое подключение к SQLite:
-   - Нажмите **"Новое соединение"** (иконка розетки)
-   - Выберите **SQLite**
-   - Укажите путь к файлу `dataset/mosmusic_final_collabs_multiple_albums`
-3. Откройте любой файл из папки `queries/` через **File → Open File**
-4. Нажмите **Ctrl + Enter** для выполнения запроса
+DIT_tasks/
+├── block_one/
+│   ├── data/
+│   │   └── mosmusic_final_collabs_multiple_albums.db
+│   ├── queries/
+│   │   ├── task_1_rock_album.sql
+│   │   ├── task_2_top_20_percent.sql
+│   │   ├── task_3_collaborations.sql
+│   │   ├── task_4_monthly_stats.sql
+│   │   └── task_5_genres_by_region.sql
+│   └── README.md
+│
+└── block_two/
+    ├── data/
+    │   └── newborns_stats.csv
+    ├── task_1_prediction.ipynb
+    └── README.md
+README.md
