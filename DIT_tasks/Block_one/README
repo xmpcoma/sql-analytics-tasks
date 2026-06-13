@@ -1,62 +1,28 @@
-# Блок 1: SQL-аналитика музыкального сервиса
+# 🎵 Блок 1: SQL-аналитика
 
-Анализ данных музыкальной платформы с помощью SQL-запросов.
+SQL-запросы для анализа музыкального сервиса.
 
 ## 📋 Задачи
 
-### Task 1: Самый прослушиваемый Rock-альбом
-Найти альбом с наибольшим количеством прослушиваний песен в жанре Rock.
+| # | Задача | Результат |
+|---|--------|-----------|
+| 1 | Самый прослушиваемый Rock-альбом | **Night Visions** — Imagine Dragons (345) |
+| 2 | Топ-20% по хитам | NTILE(5) + группировка по артисту |
+| 3 | Альбом с коллаборациями | **Lemonade** — Beyoncé (4) |
+| 4 | Динамика по месяцам | Таблица YYYY-MM, total_listens |
+| 5 | Жанры по регионам | Rock/Hip-Hop лидируют |
 
-**Результат:**
-| album | artist | listens |
-|-------|--------|---------|
-| Night Visions | Imagine Dragons | 345 |
+## ️ База данных
 
-### Task 2: Топ-20% по хитам
-Определить исполнителя с наибольшим количеством песен в топ-20% по прослушиваниям.
+`data/mosmusic_final_collabs_multiple_albums.db` (SQLite)
 
-**Подход:** Использован NTILE(5) для разделения песен на квинтили.
+**Таблицы:** artists, albums, songs, song_artists, genres, song_genres, listening_logs
 
-### Task 3: Альбом с коллаборациями
-Найти альбом с наибольшим количеством песен с несколькими артистами.
+## 🚀 Запуск
 
-**Результат:**
-| album | artist | collab_count |
-|-------|--------|--------------|
-| Lemonade | Beyoncé | 4 |
-
-### Task 4: Динамика прослушиваний по месяцам
-Составить таблицу с суммарным количеством прослушиваний по месяцам.
-
-**Формат вывода:** year_month (YYYY-MM), total_listens
-
-### Task 5: Популярность жанров по регионам
-Создать сводную таблицу прослушиваний по жанрам и регионам.
-
-**Топ жанров:**
-- Rock: Krasnoyarsk (244 прослушивания)
-- Hip-Hop: Yekaterinburg (240 прослушиваний)
-
-## 🗄️ Структура базы данных
-
-| Таблица | Описание |
-|---------|----------|
-| **artists** | artist_id, name, country |
-| **albums** | album_id, title, artist_id, release_year |
-| **songs** | song_id, title, album_id, release_year |
-| **song_artists** | song_id, artist_id (связь M:M) |
-| **genres** | genre_id, name |
-| **song_genres** | song_id, genre_id (связь M:M) |
-| **listening_logs** | user_id, song_id, listen_time, device, region |
-
-## 🚀 Запуск запросов
-
-### Через DBeaver (рекомендуется):
-1. Откройте DBeaver
-2. Подключитесь к SQLite: `data/mosmusic_final_collabs_multiple_albums.db`
-3. Откройте любой файл из папки `queries/`
-4. Выполните запрос (Ctrl + Enter)
-
-### Через командную строку:
 ```bash
+# DBeaver
+Открыть файл БД → queries/ → любой .sql файл → Ctrl+Enter
+
+# Консоль
 sqlite3 data/mosmusic_final_collabs_multiple_albums.db < queries/task_1_rock_album.sql
