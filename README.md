@@ -15,7 +15,11 @@ DIT_tasks/
 └── block_two/
     ├── data/
     │   └── newborns_stats.csv
-    ├── task_1_prediction.ipynb
+    ├── tasks/
+    │   ├── task_1_prediction.ipynb
+    │   ├── task_2_chains.ipynb
+    │   ├── task_3_normalize_names .ipynb
+    │   ├── task_4_pairs.ipynb       
     └── README.md
 README.md
 ```
